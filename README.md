@@ -2,12 +2,12 @@
 
 ## General Info
 
-- Alma Benavides
 - Alan Crisanto
-- Mariana Overbay
-- Felipe Belisário
+- Alma Benavides
 - Armando Kamisaki
+- Felipe Belisário
 - Jonatan Troche
+- Mariana Overbay
 
 ## Application Info
 
