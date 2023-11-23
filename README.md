@@ -102,8 +102,8 @@ Implementing Role-Based Access Control (RBAC) for different levels of access and
 ### Task Allocation
 
 Tasks will be divided among team members as follows:
-- HTTP methods for each collection will be handled by Mariana, Allan, Armando, Felipe, and Alma.
-- Node.js project creation and MongoDB setup will be handled by Mariana Overbay.
+- HTTP methods for each collection will be handled by Alan, Alma, Armando, Felipe, and Mariana.
+- Node.js project creation and MongoDB setup will be handled by Alma and Mariana.
 - Git repo setup and sharing will be done by Felipe Belisário.
 - API Swagger documentation, authentication, unit tests, and video presentation responsibilities are yet to be allocated.
 
