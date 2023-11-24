@@ -1,6 +1,6 @@
 # Restaurant API Project
 
-## General Info
+## Contributors
 
 - Alan Crisanto
 - Alma Benavides
