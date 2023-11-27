@@ -1,0 +1,52 @@
+[
+  {
+    "restaurantName": "Symphony Restaurant",
+    "streetAddress": "4400 Sharon Rd",
+    "city": "Charlotte",
+    "state": "North Carolina",
+    "country": "United States",
+    "zipCode": "28211",
+    "phoneNumber": "111-222-3348",
+    "email": "symphonyrestaurant@gmail.com"
+  },
+  {
+    "restaurantName": "Cascade Restaurant",
+    "streetAddress": "2852 Cascade Rd",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "country": "United States",
+    "zipCode": "30311",
+    "phoneNumber": "293-222-2839",
+    "email": "cascaderestaurant@gmail.com"
+  },
+  {
+    "restaurantName": "Mexico City Restaurant",
+    "streetAddress": "Av. Luis Barragan 505",
+    "city": "Santa Fe",
+    "state": "Mexico City",
+    "country": "Mexico",
+    "zipCode": "05348",
+    "phoneNumber": "872-222-3348",
+    "email": "mexicocityrestaurant@gmail.com"
+  },
+  {
+    "restaurantName": "Glendale Restaurant",
+    "streetAddress": "8866 W Thunderbird Rd",
+    "city": "Peoria",
+    "state": "Arizona",
+    "country": "United States",
+    "zipCode": "85381",
+    "phoneNumber": "111-928-3348",
+    "email": "glendalerestaurant@gmail.com"
+  },
+  {
+    "restaurantName": "Rocky Restaurant",
+    "streetAddress": "6550 Gateway Rd",
+    "city": "Commerce City",
+    "state": "Colorado",
+    "country": "United States",
+    "zipCode": "80022",
+    "phoneNumber": "829-222-3348",
+    "email": "rockyrestaurant@gmail.com"
+  }
+]

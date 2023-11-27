@@ -1,0 +1,37 @@
+[
+  {
+    "foodName": "Classic Burger",
+    "category": "Main Course",
+    "price": 12.99,
+    "description": "Juicy beef patty with lettuce, tomato, and cheese on a sesame seed bun.",
+    "stock": 50
+  },
+  {
+    "foodName": "Vegetarian Pasta",
+    "category": "Main Course",
+    "price": 14.99,
+    "description": "Pasta with a mix of fresh vegetables and marinara sauce.",
+    "stock": 40
+  },
+  {
+    "foodName": "Caesar Salad",
+    "category": "Salad",
+    "price": 8.99,
+    "description": "Crisp romaine lettuce, croutons, parmesan cheese, and Caesar dressing.",
+    "stock": 30
+  },
+  {
+    "foodName": "Tacos al Pastor",
+    "category": "Main Course",
+    "price": 16.99,
+    "description": "Marinated pork cooked on a vertical spit, served with onions, cilantro, and pineapple in a corn tortilla.",
+    "stock": 50
+  },
+  {
+    "foodName": "Chocolate Brownie Sundae",
+    "category": "Dessert",
+    "price": 7.99,
+    "description": "Warm chocolate brownie topped with vanilla ice cream and chocolate syrup.",
+    "stock": 20
+  }
+]

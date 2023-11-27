@@ -1,0 +1,42 @@
+[
+  {
+    "clientName": "John Smith",
+    "price": 23.9,
+    "tableNumber": 3,
+    "staffName": "Carlos Gonzalez",
+    "date": "11/27/2023",
+    "orderStatus": "Served"
+  },
+  {
+    "clientName": "Mary Robson",
+    "price": 50.89,
+    "tableNumber": 8,
+    "staffName": "Carlos Gonzalez",
+    "date": "11/27/2023",
+    "orderStatus": "Served"
+  },
+  {
+    "clientName": "Janet Christsen",
+    "price": 48.7,
+    "tableNumber": 6,
+    "staffName": "Emily White",
+    "date": "11/27/2023",
+    "orderStatus": "Served"
+  },
+  {
+    "clientName": "John Smith",
+    "price": 80.83,
+    "tableNumber": 6,
+    "staffName": "David Johnson",
+    "date": "11/30/2023",
+    "orderStatus": "Served"
+  },
+  {
+    "clientName": "Julia Ross",
+    "price": 39.9,
+    "tableNumber": 10,
+    "staffName": "David Johnson",
+    "date": "11/27/2023",
+    "orderStatus": "Served"
+  }
+]

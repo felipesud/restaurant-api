@@ -1,0 +1,37 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Smith",
+    "birthday": "05/23/1990",
+    "phoneNumber": "398-293-2222",
+    "email": "johnsmith@gmail.com"
+  },
+  {
+    "firstName": "Mary",
+    "lastName": "Robson",
+    "birthday": "09/23/1972",
+    "phoneNumber": "684-293-4567",
+    "email": "maryrobson@gmail.com"
+  },
+  {
+    "firstName": "Janet",
+    "lastName": "Christsen",
+    "birthday": "01/20/2000",
+    "phoneNumber": "987-293-8765",
+    "email": "janetchris@gmail.com"
+  },
+  {
+    "firstName": "James",
+    "lastName": "Lopez",
+    "birthday": "08/15/1980",
+    "phoneNumber": "298-555-2222",
+    "email": "jameslopez@gmail.com"
+  },
+  {
+    "firstName": "Julia",
+    "lastName": "Ross",
+    "birthday": "06/27/1993",
+    "phoneNumber": "398-244-2332",
+    "email": "juliaross@gmail.com"
+  }
+]

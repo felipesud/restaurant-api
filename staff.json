@@ -1,0 +1,52 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Smith",
+    "birthday": "03/15/1985",
+    "email": "john_smith@email.com",
+    "phoneNumber": "123-456-7890",
+    "jobPosition": "Chef",
+    "active": true,
+    "restaurantName": "Symphony Restaurant"
+  },
+  {
+    "firstName": "Maria",
+    "lastName": "Rodriguez",
+    "birthday": "08/22/1990",
+    "email": "mariarodriguez3@email.com",
+    "phoneNumber": "987-654-3210",
+    "jobPosition": "Waiter",
+    "active": true,
+    "restaurantName": "Symphony Restaurant"
+  },
+  {
+    "firstName": "David",
+    "lastName": "Johnson",
+    "birthday": "11/10/1982",
+    "email": "davidjohnson@email.com",
+    "phoneNumber": "555-123-4567",
+    "jobPosition": "Manager",
+    "active": true,
+    "restaurantName": "Cascade Restaurant"
+  },
+  {
+    "firstName": "Emily",
+    "lastName": "White",
+    "birthday": "06/25/1988",
+    "email": "emily.white@email.com",
+    "phoneNumber": "789-012-3456",
+    "jobPosition": "Bartender",
+    "active": true,
+    "restaurantName": "Glendale Restaurant"
+  },
+  {
+    "firstName": "Carlos",
+    "lastName": "Gonzalez",
+    "birthday": "02/03/1995",
+    "email": "carlosgonzalezz@email.com",
+    "phoneNumber": "456-789-0123",
+    "jobPosition": "Cashier",
+    "active": true,
+    "restaurantName": "Mexico City Restaurant"
+  }
+]
