@@ -25,10 +25,6 @@ router.put(
 );
 
 //delete restaurant
-router.delete(
-  '/:id',
-  validation.saveRestaurant,
-  restaurantController.deleteRestaurant
-);
+router.delete('/:id', restaurantController.deleteRestaurant);
 
 module.exports = router;
