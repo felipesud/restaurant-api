@@ -43,3 +43,56 @@ Content-Type: application/json
 ### Delete restaurant
 
 DELETE http://localhost:3000/restaurants/65679dcd43a0e1b3eb856be7 HTTP/1.1
+
+### Get all orders
+# @name getAllOrders
+GET http://localhost:3000/orders
+Content-Type: application/json
+
+
+### Get single order
+# @name getSingleOrder
+GET http://localhost:3000/orders/{656547191ca2710057a4d7c1}
+Content-Type: application/json
+
+
+### Create order
+# @name createOrder
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+  "clientName": "John Smith",
+  "price": 80.83,
+  "tableNumber": 6,
+  "staffName": "David Johnson",
+  "date": "11/30/2023",
+  "orderStatus": "Served"
+}
+
+
+### Update order
+# @name updateOrder
+PUT http://localhost:3000/orders/{656547191ca2710057a4d7c1}
+Content-Type: application/json
+
+{
+  "clientName": "John Smith",
+  "price": 90.00,
+  "tableNumber": 6,
+  "staffName": "David Johnson",
+  "date": "11/30/2023",
+  "orderStatus": "Served"
+}
+
+
+### Delete order
+# @name deleteOrder
+DELETE http://localhost:3000/orders/{656547191ca2710057a4d7c2}
+Content-Type: application/json
+
+
+### Get order by client name
+# @name getOrderByClientName
+GET http://localhost:3000/orders/client/{John%Smith}
+Content-Type: application/json
