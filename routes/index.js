@@ -6,6 +6,6 @@ const router = require('express').Router();
 //router.use('/staff', require('./staff'));
 router.use('/restaurants', require('./restaurant'));
 //router.use('/menu', require('./menu'));
-//router.use('/orders', require('./order'));
+router.use('/orders', require('./order'));
 
 module.exports = router;
