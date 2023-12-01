@@ -91,9 +91,31 @@ const saveStaff = (req, res, next) => {
 	});
 };
 
+const saveMenu = (req, res, next) => {
+  const validationRule = {
+    foodName: 'required|string',
+    category: 'required|string',
+    price: 'required|numeric',
+    description: 'required|string',
+    stock: 'required|numeric'
+  };
+  validator(req.body, validationRule, {}, (err, status) => {
+    if (!status) {
+      res.status(412).send({
+        success: false,
+        message: 'Validation failed',
+        data: err,
+      });
+    } else {
+      next();
+    }
+  });
+};
+
 module.exports = {
 	saveRestaurant,
 	saveOrder,
 	saveClient,
-	saveStaff
+	saveStaff,
+  saveMenu
 };
