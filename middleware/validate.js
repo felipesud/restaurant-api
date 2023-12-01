@@ -67,8 +67,33 @@ const saveOrder = (req, res, next) => {
 	});
 };
 
+const saveStaff = (req, res, next) => {
+	const validationRule = {
+		firstName: "required|string",
+		lastName: "required|string",
+		birthday: "required|string",
+		email: "required|email",
+		phoneNumber: "required|string",
+		jobPosition: "required|string",
+		active: "required|boolean",
+		restaurantName: "required|string"
+	};
+	validator(req.body, validationRule, {}, (err, status) => {
+		if (!status) {
+			res.status(412).send({
+				success: false,
+				message: "Validation failed",
+				data: err,
+			});
+		} else {
+			next();
+		}
+	});
+};
+
 module.exports = {
 	saveRestaurant,
 	saveOrder,
 	saveClient,
+	saveStaff
 };
