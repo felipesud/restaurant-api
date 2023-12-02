@@ -5,7 +5,7 @@
     "description": "Restaurant API",
     "version": "1.0.0"
   },
-  "host": "restaurantapi-7qg2.onrender.com/",
+  "host": "restaurantapi-7qg2.onrender.com",
   "basePath": "/",
   "schemes": ["https"],
   "paths": {
