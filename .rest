@@ -260,7 +260,7 @@ Content-Type: application/json
 
 ### Update restaurant
 
-PUT https://restaurantapi-7qg2.onrender.com/restaurants/65679dcd43a0e1b3eb856be7 HTTP/1.1
+PUT https://restaurantapi-7qg2.onrender.com/restaurants/656509df1f46cf50da636ef2 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -270,13 +270,13 @@ Content-Type: application/json
     "state": "North Carolina",
     "country": "United States",
     "zipCode": "28211",
-    "phoneNumber": "345-222-3348",
+    "phoneNumber": "365-222-3348",
     "email": "symphonyrestaurant@gmail.com"
 }
 
 ### Delete restaurant
 
-DELETE https://restaurantapi-7qg2.onrender.com/restaurants/65679dcd43a0e1b3eb856be7 HTTP/1.1
+DELETE https://restaurantapi-7qg2.onrender.com/restaurants/656b93482b422177feeac130 HTTP/1.1
 
 
 ### CLients
