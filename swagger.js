@@ -2,11 +2,11 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'Restaurant_Api',
-    description: 'Restaurant API'
+    title: 'Restaurant API',
+    description: 'Restaurant API',
   },
   host: 'localhost:3000',
-  schemes: ['http']
+  schemes: ['http', 'https'],
 };
 
 const outputFile = './swagger.json';
