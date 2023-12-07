@@ -19,7 +19,7 @@ app
     );
     next();
   })
-  .use('/', require('./routes'));
+  .use('/', require('./routes/index'));
 
 //handle errors
 process.on('uncaughtException', (err, origin) => {
@@ -32,8 +32,7 @@ process.on('uncaughtException', (err, origin) => {
 mongodb.initDb((err) => {
   if (err) {
     console.log(err);
-  } else {
-    app.listen(port);
-    console.log(`Connected to DB and listening on ${port}`);
   }
 });
+
+module.exports = app;

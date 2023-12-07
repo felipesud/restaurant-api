@@ -1,24 +1,33 @@
-const mongoose = require('mongoose');
-const request = require('supertest');
-const express = require('express');
-const app = express();
-app.use('/', require('../routes/index'));
+const app = require('../server');
+const supertest = require('supertest');
+const { expect } = require('@jest/globals');
+const request = supertest(app);
+const { MongoClient } = require('mongodb');
+const dotenv = require('dotenv');
+dotenv.config();
 
-require('dotenv').config();
+describe('Test Handlers', () => {
+  beforeAll(async () => {
+    connection = await MongoClient.connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    db = await connection.db('restaurants');
+  });
+  afterAll(async () => {
+    await connection.close();
+  });
 
-/* Connecting to the database before each test. */
-beforeEach(async () => {
-  await mongoose.connect(process.env.MONGODB_URI);
-});
+  test('responds to /restaurants', async () => {
+    const res = await request.get('/restaurants');
+    expect(res.header['content-type']).toBe('application/json; charset=utf-8');
+    expect(res.statusCode).toBe(200);
+  });
 
-/* Closing database connection after each test. */
-afterEach(async () => {
-  await mongoose.connection.close();
-});
-
-describe('GET /api-docs/restaurants', () => {
-  it('should return all restaurants', async () => {
-    const res = await request(app).get('/restaurants/');
+  test('responds to /restaurants/:id', async () => {
+    const mockId = '656509df1f46cf50da636ef2';
+    const res = await request.get('/restaurants/' + mockId);
+    expect(res.header['content-type']).toBe('application/json; charset=utf-8');
     expect(res.statusCode).toBe(200);
   });
 });
