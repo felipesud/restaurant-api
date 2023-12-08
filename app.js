@@ -6,9 +6,7 @@ const session = require('express-session');
 const GitHubStrategy = require('passport-github2').Strategy;
 const app = express();
 const cors = require('cors');
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json'); 
-const restaurantRouter = require('./routes/restaurant')
+
 
 app
   .use(bodyParser.json())
@@ -63,9 +61,7 @@ app.get('/github/callback', passport.authenticate('github', {
 
 app.use(express.json());
 
-app.use('/api-docs', swaggerUi.serve);
-app.get('/api-docs', swaggerUi.setup(swaggerDocument));
-app.use('/restaurants', restaurantRouter);
+
 
 //handle errors
 process.on('uncaughtException', (err, origin) => {
