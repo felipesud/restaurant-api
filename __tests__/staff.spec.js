@@ -22,8 +22,8 @@ describe('Test Handlers', () => {
   });
 
   test('should return one staff', async () => {
-    const res = await request(server).get('/staff/65650d901f46cf50da636f1e');
+    const res = await request(server).get('/staff/65650d901f46cf50da636f1c');
     expect(res.statusCode).toBe(200);
-    expect(res.body.firstName).toBe('David');
+    expect(res.body.firstName).toBe('John');
   });
 });
