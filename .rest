@@ -84,13 +84,10 @@ Content-Type: application/json
 ### Delete client
 
 DELETE http://localhost:3000/clients/6567b47fd87d8414cc6756fa HTTP/1.1
-<<<<<<< HEAD
-=======
 
 
 ### Orders
 
->>>>>>> 4c89e494581e42dec19cabf850223262f191e9cc
 ### Get all orders
 # @name getAllOrders
 GET http://localhost:3000/orders
@@ -143,8 +140,6 @@ Content-Type: application/json
 # @name getOrderByClientName
 GET http://localhost:3000/orders/client/{John%Smith}
 Content-Type: application/json
-<<<<<<< HEAD
-=======
 
 =======
 ### Staff
@@ -468,4 +463,3 @@ Content-Type: application/json
 # @name deleteMenu
 DELETE https://restaurantapi-7qg2.onrender.com/menus/{}
 Content-Type: application/json
->>>>>>> 4c89e494581e42dec19cabf850223262f191e9cc
