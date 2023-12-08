@@ -5,15 +5,52 @@
     "description": "Restaurant API",
     "version": "1.0.0"
   },
-  "host": "restaurantapi-7qg2.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "http",
+    "https"
+  ],
   "paths": {
+    "/login": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/clients/": {
       "get": {
-        "tags": ["Clients"],
+        "tags": [
+          "Clients"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -21,7 +58,9 @@
         }
       },
       "post": {
-        "tags": ["Clients"],
+        "tags": [
+          "Clients"
+        ],
         "description": "",
         "parameters": [
           {
@@ -64,9 +103,13 @@
     },
     "/clients/{id}": {
       "get": {
-        "tags": ["Clients"],
+        "tags": [
+          "Clients"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -82,7 +125,9 @@
         }
       },
       "put": {
-        "tags": ["Clients"],
+        "tags": [
+          "Clients"
+        ],
         "description": "",
         "parameters": [
           {
@@ -129,7 +174,9 @@
         }
       },
       "delete": {
-        "tags": ["Clients"],
+        "tags": [
+          "Clients"
+        ],
         "description": "",
         "parameters": [
           {
@@ -151,9 +198,13 @@
     },
     "/staff/": {
       "get": {
-        "tags": ["Staff"],
+        "tags": [
+          "Staff"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -164,7 +215,9 @@
         }
       },
       "post": {
-        "tags": ["Staff"],
+        "tags": [
+          "Staff"
+        ],
         "description": "",
         "parameters": [
           {
@@ -205,8 +258,8 @@
           "201": {
             "description": "Created"
           },
-          "412": {
-            "description": "Precondition Failed"
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -216,9 +269,13 @@
     },
     "/staff/{id}": {
       "get": {
-        "tags": ["Staff"],
+        "tags": [
+          "Staff"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -240,7 +297,9 @@
         }
       },
       "put": {
-        "tags": ["Staff"],
+        "tags": [
+          "Staff"
+        ],
         "description": "",
         "parameters": [
           {
@@ -290,8 +349,8 @@
           "400": {
             "description": "Bad Request"
           },
-          "412": {
-            "description": "Precondition Failed"
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -299,7 +358,9 @@
         }
       },
       "delete": {
-        "tags": ["Staff"],
+        "tags": [
+          "Staff"
+        ],
         "description": "",
         "parameters": [
           {
@@ -315,6 +376,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -324,9 +388,13 @@
     },
     "/restaurants/": {
       "get": {
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -337,7 +405,9 @@
         }
       },
       "post": {
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "",
         "parameters": [
           {
@@ -378,8 +448,8 @@
           "204": {
             "description": "No Content"
           },
-          "412": {
-            "description": "Precondition Failed"
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -389,9 +459,13 @@
     },
     "/restaurants/{id}": {
       "get": {
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -410,7 +484,9 @@
         }
       },
       "put": {
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "",
         "parameters": [
           {
@@ -460,8 +536,8 @@
           "400": {
             "description": "Bad Request"
           },
-          "412": {
-            "description": "Precondition Failed"
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -469,7 +545,9 @@
         }
       },
       "delete": {
-        "tags": ["Restaurants"],
+        "tags": [
+          "Restaurants"
+        ],
         "description": "",
         "parameters": [
           {
@@ -486,6 +564,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -494,9 +575,13 @@
     },
     "/menus/": {
       "get": {
-        "tags": ["Menus"],
+        "tags": [
+          "Menus"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -507,7 +592,9 @@
         }
       },
       "post": {
-        "tags": ["Menus"],
+        "tags": [
+          "Menus"
+        ],
         "description": "",
         "parameters": [
           {
@@ -539,8 +626,8 @@
           "204": {
             "description": "No Content"
           },
-          "412": {
-            "description": "Precondition Failed"
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -550,9 +637,13 @@
     },
     "/menus/{id}": {
       "get": {
-        "tags": ["Menus"],
+        "tags": [
+          "Menus"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -571,7 +662,9 @@
         }
       },
       "put": {
-        "tags": ["Menus"],
+        "tags": [
+          "Menus"
+        ],
         "description": "",
         "parameters": [
           {
@@ -612,8 +705,8 @@
           "400": {
             "description": "Bad Request"
           },
-          "412": {
-            "description": "Precondition Failed"
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -621,7 +714,9 @@
         }
       },
       "delete": {
-        "tags": ["Menus"],
+        "tags": [
+          "Menus"
+        ],
         "description": "",
         "parameters": [
           {
@@ -638,6 +733,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -646,9 +744,13 @@
     },
     "/orders/": {
       "get": {
-        "tags": ["Orders"],
+        "tags": [
+          "Orders"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -659,7 +761,9 @@
         }
       },
       "post": {
-        "tags": ["Orders"],
+        "tags": [
+          "Orders"
+        ],
         "description": "",
         "parameters": [
           {
@@ -694,8 +798,8 @@
           "204": {
             "description": "No Content"
           },
-          "412": {
-            "description": "Precondition Failed"
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -705,9 +809,13 @@
     },
     "/orders/{id}": {
       "get": {
-        "tags": ["Orders"],
+        "tags": [
+          "Orders"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -726,7 +834,9 @@
         }
       },
       "put": {
-        "tags": ["Orders"],
+        "tags": [
+          "Orders"
+        ],
         "description": "",
         "parameters": [
           {
@@ -770,8 +880,8 @@
           "400": {
             "description": "Bad Request"
           },
-          "412": {
-            "description": "Precondition Failed"
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -779,7 +889,9 @@
         }
       },
       "delete": {
-        "tags": ["Orders"],
+        "tags": [
+          "Orders"
+        ],
         "description": "",
         "parameters": [
           {
@@ -796,6 +908,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -804,9 +919,13 @@
     },
     "/orders/client/{clientName}": {
       "get": {
-        "tags": ["Orders"],
+        "tags": [
+          "Orders"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "clientName",
