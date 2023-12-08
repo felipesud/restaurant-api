@@ -3,7 +3,7 @@ const router = require('express').Router();
 const menu = require('../controllers/menu');
 const validation = require('../middleware/validate');
 
-router.get('/', menu.getAllMenu);
+router.get('/', menu.getAllMenus);
 router.get('/:id', menu.getSingleMenu);
 
 router.post('/', validation.saveMenu, menu.createMenu);
