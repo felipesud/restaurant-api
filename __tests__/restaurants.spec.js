@@ -27,7 +27,7 @@ describe('Test Handlers', () => {
   test('responds to /restaurants/:id', async () => {
     const mockId = '656509df1f46cf50da636ef2';
     const res = await request.get('/restaurants/' + mockId);
-    expect(res.header['content-type']).toBe('application/json; charset=utf-8');
+    expect(res.header['content-type']).toBe('application/json');
     expect(res.statusCode).toBe(200);
   });
 });
