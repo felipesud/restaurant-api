@@ -7,12 +7,14 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 describe('Test Handlers', () => {
+  let db;
+
   beforeAll(async () => {
     connection = await MongoClient.connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    db = await connection.db('menus');
+    db = await connection.db('restaurant_api');
   });
   afterAll(async () => {
     await connection.close();
@@ -20,7 +22,6 @@ describe('Test Handlers', () => {
 
   test('responds to /menus', async () => {
     const res = await request.get('/menus');
-    console.log(res.body);
     expect(res.header['content-type']).toBe('application/json; charset=utf-8');
     expect(res.statusCode).toBe(200);
   });
@@ -28,7 +29,7 @@ describe('Test Handlers', () => {
   test('responds to /menus/:id', async () => {
     const mockId = '656a0ccdfa8841ca09ac0cc2';
     const res = await request.get('/menus/' + mockId);
-    expect(res.header['content-type']).toBe('application/json; charset=utf-8');
+    expect(res.header['content-type']).toBe('application/json');
     expect(res.statusCode).toBe(200);
-  });
+  });
 });
