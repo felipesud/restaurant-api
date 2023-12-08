@@ -1,11 +1,11 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-//get all Menu
-const getAllMenu = async (req, res) => {
-  //#swagger.tags = ['Menu']
+//get all Menus
+const getAllMenus = async (req, res) => {
+  //#swagger.tags = ['Menus']
   try {
-    const result = await mongodb.getDatabase().db().collection('menu').find();
+    const result = await mongodb.getDatabase().db().collection('menus').find();
     result.toArray().then((lists) => {
       res.setHeader('Content-Type', 'application/json');
       res.status(200).json(lists);
@@ -16,7 +16,7 @@ const getAllMenu = async (req, res) => {
 };
 
 const getSingleMenu = async (req, res) => {
-  //#swagger.tags = ['Menu']
+  //#swagger.tags = ['Menus']
   //validation of the id
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid menu id to find a menu.');
@@ -26,7 +26,7 @@ const getSingleMenu = async (req, res) => {
       const result = await mongodb
         .getDatabase()
         .db()
-        .collection('menu')
+        .collection('menus')
         .find({ _id: menuId });
       result.toArray().then((lists) => {
         res.setHeader('Content-Type', 'application/json');
@@ -39,7 +39,7 @@ const getSingleMenu = async (req, res) => {
 };
 
 const createMenu = async (req, res) => {
-  //#swagger.tags = ['Menu']
+  //#swagger.tags = ['Menus']
   const menu = {
     foodName: req.body.foodName,
     category: req.body.category,
@@ -50,7 +50,7 @@ const createMenu = async (req, res) => {
   const response = await mongodb
     .getDatabase()
     .db()
-    .collection('menu')
+    .collection('menus')
     .insertOne(menu);
   if (response.acknowledged) {
     res.status(204).send();
@@ -62,7 +62,7 @@ const createMenu = async (req, res) => {
 };
 
 const updateMenu = async (req, res) => {
-  //#swagger.tags = ['Menu']
+  //#swagger.tags = ['Menus']
   //validation of the id
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid menu id to update a menu.');
@@ -78,7 +78,7 @@ const updateMenu = async (req, res) => {
   const response = await mongodb
     .getDatabase()
     .db()
-    .collection('menu')
+    .collection('menus')
     .replaceOne({ _id: menuId }, menu);
   if (response.modifiedCount > 0) {
     res.status(204).send();
@@ -90,7 +90,7 @@ const updateMenu = async (req, res) => {
 };
 
 const deleteMenu = async (req, res) => {
-  //#swagger.tags = ['Menu']
+  //#swagger.tags = ['Menus']
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid menu id to delete a menu.');
   }
@@ -98,7 +98,7 @@ const deleteMenu = async (req, res) => {
   const response = await mongodb
     .getDatabase()
     .db()
-    .collection('menu')
+    .collection('menus')
     .deleteOne({ _id: menuId }, true);
   if (response.deletedCount > 0) {
     res.status(204).send();
@@ -110,7 +110,7 @@ const deleteMenu = async (req, res) => {
 };
 
 module.exports = {
-  getAllMenu,
+  getAllMenus,
   getSingleMenu,
   createMenu,
   updateMenu,
