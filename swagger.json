@@ -573,11 +573,9 @@
         }
       }
     },
-    "/menus/": {
+    "/menu/": {
       "get": {
-        "tags": [
-          "Menus"
-        ],
+        "tags": ["Menu"],
         "description": "",
         "produces": [
           "application/json"
@@ -592,9 +590,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Menus"
-        ],
+        "tags": ["Menu"],
         "description": "",
         "parameters": [
           {
@@ -635,11 +631,9 @@
         }
       }
     },
-    "/menus/{id}": {
+    "/menu/{id}": {
       "get": {
-        "tags": [
-          "Menus"
-        ],
+        "tags": ["Menu"],
         "description": "",
         "produces": [
           "application/json"
@@ -662,9 +656,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Menus"
-        ],
+        "tags": ["Menu"],
         "description": "",
         "parameters": [
           {
@@ -714,9 +706,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Menus"
-        ],
+        "tags": ["Menu"],
         "description": "",
         "parameters": [
           {
