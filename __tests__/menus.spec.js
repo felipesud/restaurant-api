@@ -7,6 +7,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 describe('Test Handlers', () => {
+  let db;
+
   beforeAll(async () => {
     connection = await MongoClient.connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
@@ -18,16 +20,16 @@ describe('Test Handlers', () => {
     await connection.close();
   });
 
-  test('responds to /orders', async () => {
-    const res = await request.get('/orders');
+  test('responds to /menus', async () => {
+    const res = await request.get('/menus');
     expect(res.header['content-type']).toBe('application/json; charset=utf-8');
     expect(res.statusCode).toBe(200);
   });
 
-  test('responds to /orders/:id', async () => {
-    const mockId = '65650cd01f46cf50da636f14';
-    const res = await request.get('/orders/' + mockId);
-    expect(res.header['content-type']).toBe('application/json; charset=utf-8');
+  test('responds to /menus/:id', async () => {
+    const mockId = '656a0ccdfa8841ca09ac0cc2';
+    const res = await request.get('/menus/' + mockId);
+    expect(res.header['content-type']).toBe('application/json');
     expect(res.statusCode).toBe(200);
   });
 });
