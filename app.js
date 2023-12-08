@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const session = require('express-session');
 const GitHubStrategy = require('passport-github2').Strategy;
+const mongodb = require('./db/connect');
+
 const app = express();
 const cors = require('cors');
 
@@ -68,6 +70,12 @@ process.on('uncaughtException', (err, origin) => {
     process.stderr.fd,
     `Caught exception: ${err}\n` + `Exception origin: ${origin}`
   );
+});
+
+mongodb.initDb((err) => {
+  if (err) {
+    console.log(err);
+  }
 });
 
 module.exports = app;

@@ -12,7 +12,7 @@ describe('Test Handlers', () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    db = await connection.db('orders');
+    db = await connection.db('restaurant_api');
   });
   afterAll(async () => {
     await connection.close();

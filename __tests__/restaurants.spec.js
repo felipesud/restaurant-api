@@ -7,12 +7,14 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 describe('Test Handlers', () => {
+  let db;
+
   beforeAll(async () => {
     connection = await MongoClient.connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    db = await connection.db('restaurants');
+    db = await connection.db('restaurant_api');
   });
   afterAll(async () => {
     await connection.close();

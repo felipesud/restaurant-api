@@ -12,7 +12,7 @@ describe('insert', () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    db = await connection.db('restaurants');
+    db = await connection.db('restaurant_api');
   });
   afterAll(async () => {
     await connection.close();
