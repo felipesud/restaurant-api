@@ -44,7 +44,6 @@ Content-Type: application/json
 
 DELETE http://localhost:3000/restaurants/65679dcd43a0e1b3eb856be7 HTTP/1.1
 
-<<<<<<< HEAD
 
 ### CLients
 
@@ -85,7 +84,6 @@ Content-Type: application/json
 ### Delete client
 
 DELETE http://localhost:3000/clients/6567b47fd87d8414cc6756fa HTTP/1.1
-=======
 ### Get all orders
 # @name getAllOrders
 GET http://localhost:3000/orders
@@ -138,4 +136,3 @@ Content-Type: application/json
 # @name getOrderByClientName
 GET http://localhost:3000/orders/client/{John%Smith}
 Content-Type: application/json
->>>>>>> 6977a33ab95d60dcf75fddc7c0fff2f539ffe466
