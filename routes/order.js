@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const orderController = require('../controllers/order');
-const validation = require('../middleware/validate');
+const { isAuthenticated } = require('../middleware/authenticate');
 
 //get all orders
 router.get('/', orderController.getAllOrders);
@@ -14,12 +14,12 @@ router.get('/:id', orderController.getSingleOrder);
 router.get('/client/:clientName', orderController.getOrderByClientName);
 
 //create new order
-router.post('/', validation.saveOrder, orderController.createOrder);
+router.post('/', isAuthenticated, orderController.createOrder);
 
 //update order
-router.put('/:id', validation.saveOrder, orderController.updateOrder);
+router.put('/:id', isAuthenticated, orderController.updateOrder);
 
 //delete order
-router.delete('/:id', orderController.deleteOrder);
+router.delete('/:id', isAuthenticated, orderController.deleteOrder);
 
 module.exports = router;
