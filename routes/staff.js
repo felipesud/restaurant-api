@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const staffController = require('../controllers/staff');
-const validation = require('../middleware/validate');
+const { isAuthenticated } = require('../middleware/authenticate');
 
 //const {isAuthenticated} = require('../middleware/authenticate');
 
@@ -10,10 +10,10 @@ router.get('/', staffController.getAll);
 
 router.get('/:id', staffController.getSingle);
 
-router.post('/', validation.saveStaff, staffController.createStaff);
+router.post('/', isAuthenticated, staffController.createStaff);
 
-router.put('/:id', validation.saveStaff, staffController.updateStaff);
+router.put('/:id', isAuthenticated, staffController.updateStaff);
 
-router.delete('/:id', staffController.deleteStaff);
+router.delete('/:id', isAuthenticated, staffController.deleteStaff);
 
 module.exports = router;
