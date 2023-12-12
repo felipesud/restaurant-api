@@ -27,7 +27,7 @@ describe('Test Handlers', () => {
   test('responds to /orders/:id', async () => {
     const mockId = '65650cd01f46cf50da636f14';
     const res = await request.get('/orders/' + mockId);
-    expect(res.header['content-type']).toBe('application/json; charset=utf-8');
+    expect(res.header['content-type']).toBe('application/json');
     expect(res.statusCode).toBe(200);
   });
 });
