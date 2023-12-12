@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const restaurantController = require('../controllers/restaurant');
-const validation = require('../middleware/validate');
+const validate = require('../middleware/validate');
 const { isAuthenticated } = require('../middleware/authenticate');
 
 //get all restaurants
@@ -15,6 +15,7 @@ router.get('/:id', restaurantController.getSingleRestaurant);
 router.post(
   '/',
   isAuthenticated,
+  validate.saveRestaurant,
   restaurantController.createRestaurant
 );
 
@@ -22,6 +23,7 @@ router.post(
 router.put(
   '/:id',
   isAuthenticated,
+  validate.saveRestaurant,
   restaurantController.updateRestaurant
 );
 

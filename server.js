@@ -1,14 +1,15 @@
-const app = require('./app');
 const express = require('express');
-const mongodb = require('./db/connect');
-
 const bodyParser = require('body-parser');
+const mongodb = require('./db/connect');
 const passport = require('passport');
 const session = require('express-session');
-const GitHubStrategy = require('passport-github2').Strategy;
 const cors = require('cors');
+const dotenv = require('dotenv');
+dotenv.config();
+const GitHubStrategy = require('passport-github2').Strategy;
 
 const port = process.env.PORT || 3000;
+const app = express();
 
 app
   .use(bodyParser.json())
@@ -19,6 +20,7 @@ app
       saveUninitialized: true,
     })
   )
+  .use(passport.initialize())
   .use(passport.session())
   .use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -35,6 +37,7 @@ app
   .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'] }))
   .use(cors({ origin: '*' }))
   .use('/', require('./routes/index'));
+
 passport.use(
   new GitHubStrategy(
     {
@@ -73,8 +76,6 @@ app.get(
     res.redirect('/');
   }
 );
-
-app.use(express.json());
 
 //handle errors
 process.on('uncaughtException', (err, origin) => {
