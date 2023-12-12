@@ -110,7 +110,7 @@ Content-Type: application/json
   "price": 80.83,
   "tableNumber": 6,
   "staffName": "Emily White",
-  "date": "12//2023",
+  "date": "12/12/2023",
   "orderStatus": "Served"
 }
 

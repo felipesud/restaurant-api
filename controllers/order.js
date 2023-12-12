@@ -5,11 +5,7 @@ const ObjectId = require('mongodb').ObjectId;
 const getAllOrders = async (req, res) => {
   //#swagger.tags=['Orders']
   try {
-    const result = await mongodb
-      .getDatabase()
-      .db()
-      .collection('orders')
-      .find();
+    const result = await mongodb.getDatabase().db().collection('orders').find();
     result.toArray().then((lists) => {
       res.setHeader('Content-Type', 'application/json');
       res.status(200).json(lists);
@@ -24,9 +20,7 @@ const getSingleOrder = async (req, res) => {
   //#swagger.tags=['Orders']
   //validation of the id
   if (!ObjectId.isValid(req.params.id)) {
-    res
-      .status(400)
-      .json('Must use a valid order id to find an order.');
+    res.status(400).json('Must use a valid order id to find an order.');
   } else {
     try {
       const orderId = new ObjectId(req.params.id);
@@ -46,29 +40,27 @@ const getSingleOrder = async (req, res) => {
 };
 
 const getOrderByClientName = async (req, res) => {
-    //#swagger.tags=['Orders']
-    //validation of the clientName
-    if (!req.params.clientName) {
-      res
-        .status(400)
-        .json('Must use a valid client name to find an order.');
-    } else {
-      try {
-        const clientName = req.params.clientName;
-        const result = await mongodb
-          .getDatabase()
-          .db()
-          .collection('orders')
-          .find({ clientName: clientName });
-        result.toArray().then((lists) => {
-          res.setHeader('Content-Type', 'application/json');
-          res.status(200).json(lists);
-        });
-      } catch (err) {
-        res.status(400).json({ message: err });
-      }
+  //#swagger.tags=['Orders']
+  //validation of the clientName
+  if (!req.params.clientName) {
+    res.status(400).json('Must use a valid client name to find an order.');
+  } else {
+    try {
+      const clientName = req.params.clientName;
+      const result = await mongodb
+        .getDatabase()
+        .db()
+        .collection('orders')
+        .find({ clientName: clientName });
+      result.toArray().then((lists) => {
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json(lists);
+      });
+    } catch (err) {
+      res.status(400).json({ message: err });
     }
-  };
+  }
+};
 
 const createOrder = async (req, res) => {
   //#swagger.tags=['Orders']
@@ -91,9 +83,7 @@ const createOrder = async (req, res) => {
   } else {
     res
       .status(500)
-      .json(
-        response.error || 'Some error occurred while creating the order.'
-      );
+      .json(response.error || 'Some error occurred while creating the order.');
   }
 };
 
@@ -101,13 +91,11 @@ const updateOrder = async (req, res) => {
   //#swagger.tags=['Orders']
   //validation of the id
   if (!ObjectId.isValid(req.params.id)) {
-    res
-      .status(400)
-      .json('Must use a valid order id to update an order.');
+    res.status(400).json('Must use a valid order id to update an order.');
   }
   const orderId = new ObjectId(req.params.id);
   const order = {
-    orderName: req.body.orderName,
+    clientName: req.body.clientName,
     price: req.body.price,
     tableNumber: req.body.tableNumber,
     staffName: req.body.staffName,
@@ -125,18 +113,14 @@ const updateOrder = async (req, res) => {
   } else {
     res
       .status(500)
-      .json(
-        response.error || 'Some error occurred while updating the order.'
-      );
+      .json(response.error || 'Some error occurred while updating the order.');
   }
 };
 
 const deleteOrder = async (req, res) => {
   //#swagger.tags=['Orders']
   if (!ObjectId.isValid(req.params.id)) {
-    res
-      .status(400)
-      .json('Must use a valid order id to delete an order.');
+    res.status(400).json('Must use a valid order id to delete an order.');
   }
   const orderId = new ObjectId(req.params.id);
   const response = await mongodb
@@ -149,9 +133,7 @@ const deleteOrder = async (req, res) => {
   } else {
     res
       .status(500)
-      .json(
-        response.error || 'Some error occurred while deleting the order.'
-      );
+      .json(response.error || 'Some error occurred while deleting the order.');
   }
 };
 
