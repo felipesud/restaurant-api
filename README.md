@@ -1,13 +1,15 @@
 # Restaurant API Project
+[Project Link on Render](https://restaurantapi-7qg2.onrender.com/api-docs/)
 
+[YouTube Video](https://www.youtube.com/watch?v=N76wsmQ1-MA)
 ## Contributors
 
-- Alan Crisanto
-- Alma Benavides
-- Armando Kamisaki
-- Felipe Belisário
-- Jonatan Troche
-- Mariana Overbay
+- [Alan Crisanto](https://www.linkedin.com/in/alancrisanto/)
+- [Alma Benavides](https://www.linkedin.com/in/almabenav/)
+- [Armando Kamisaki](https://www.linkedin.com/in/armando-kamisaki-137741288/)
+- [Felipe Belisário](https://www.linkedin.com/in/felipe-belisario/)
+- [Jonatan Troche](https://www.linkedin.com/in/jonatan-troche-almedia-5532a727a/)
+- [Mariana Overbay](https://www.linkedin.com/in/mariana-overbay/)
 
 ## Application Info
 
@@ -117,9 +119,10 @@ Potential risks include time constraints due to the number of collections and th
 
 To mitigate these risks, deadlines will be set for each task:
 - Week 5: Swagger documentation ready by 12/01, progress report by 12/02.
-- Week 6: Authentication and unit tests ready by 12/07, verification of errors by 12/08, video recording or presentation by 12/09.
+- Week 6: Authentication and unit tests ready by 12/07, verification of errors by 12/08, video recording or presentation by 12/12.
 
 ---
 
 This README provides an overview of our proposed Restaurant API project. For detailed implementation and updates, refer to the associated project files and documentation.
+
 
